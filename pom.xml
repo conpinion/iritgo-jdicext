@@ -113,7 +113,7 @@
 									<pluginExecutionFilter>
 										<groupId>org.apache.maven.plugins</groupId>
 										<artifactId>maven-antrun-plugin</artifactId>
-										<version>[1.0,)</version>
+										<versionRange>[0.0.0,)</versionRange>
 										<goals>
 											<goal>run</goal>
 										</goals>
@@ -126,7 +126,7 @@
 									<pluginExecutionFilter>
 										<groupId>org.codehaus.mojo</groupId>
 										<artifactId>native-maven-plugin</artifactId>
-										<version>[1.0,)</version>
+										<versionRange>[0.0.0,)</versionRange>
 										<goals>
 											<goal>initialize</goal>
 											<goal>unzipinc</goal>
