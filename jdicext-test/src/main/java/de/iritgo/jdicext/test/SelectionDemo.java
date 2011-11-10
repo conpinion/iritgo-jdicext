@@ -29,38 +29,38 @@ import java.awt.datatransfer.Transferable;
 
 public class SelectionDemo
 {
-	public static void main (String[] args)
+	public static void main(String[] args)
 	{
-		System.out.println ("I give you ten seconds to select some text...");
+		System.out.println("I give you ten seconds to select some text...");
 
-		JDICExt.instance ().installSystemHooks ();
+		JDICExt.instance().installSystemHooks();
 
 		try
 		{
-			Thread.sleep (10000);
+			Thread.sleep(10000);
 		}
 		catch (Exception x)
 		{
 		}
 
-		JDICExt.instance ().copySelectedTextInActiveWindowToClipboard ();
+		JDICExt.instance().copySelectedTextInActiveWindowToClipboard();
 
-		Clipboard clip = Toolkit.getDefaultToolkit ().getSystemClipboard ();
-		Transferable contents = clip.getContents (null);
+		Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();
+		Transferable contents = clip.getContents(null);
 
 		if (contents != null)
 		{
 			try
 			{
-				System.out.println ("Selected text: '" + (String) contents.getTransferData (DataFlavor.stringFlavor)
+				System.out.println("Selected text: '" + (String) contents.getTransferData(DataFlavor.stringFlavor)
 								+ "'");
 			}
 			catch (Exception x)
 			{
-				System.out.println ("Error: " + x);
+				System.out.println("Error: " + x);
 			}
 		}
 
-		JDICExt.instance ().removeSystemHooks ();
+		JDICExt.instance().removeSystemHooks();
 	}
 }

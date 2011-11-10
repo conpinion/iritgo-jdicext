@@ -28,14 +28,14 @@ import org.junit.Test;
 public class TestInitialization
 {
 	@Test
-	public void checkSupportedOs ()
+	public void checkSupportedOs()
 	{
-		assertTrue (JDICExt.isSupportedOs ());
+		assertTrue(JDICExt.isSupportedOs());
 	}
 
 	@Test
-	public void accessJDICExtInstance ()
+	public void accessJDICExtInstance()
 	{
-		JDICExt jdicExt = JDICExt.instance ();
+		JDICExt jdicExt = JDICExt.instance();
 	}
 }

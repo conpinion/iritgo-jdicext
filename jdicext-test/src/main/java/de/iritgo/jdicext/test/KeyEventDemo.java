@@ -28,54 +28,54 @@ import java.awt.Event;
 
 public class KeyEventDemo
 {
-	public static void main (String[] args)
+	public static void main(String[] args)
 	{
-		JDICExt.instance ().addGlobalKeyListener (new GlobalKeyAdapter ()
+		JDICExt.instance().addGlobalKeyListener(new GlobalKeyAdapter()
 		{
-			public void globalKeyTyped (GlobalKeyEvent event)
+			public void globalKeyTyped(GlobalKeyEvent event)
 			{
-				System.out.println ("Key typed:");
+				System.out.println("Key typed:");
 
-				if ((event.getModifiers () & Event.SHIFT_MASK) != 0)
+				if ((event.getModifiers() & Event.SHIFT_MASK) != 0)
 				{
-					System.out.println ("\tSHIFT");
+					System.out.println("\tSHIFT");
 				}
 
-				if ((event.getModifiers () & Event.CTRL_MASK) != 0)
+				if ((event.getModifiers() & Event.CTRL_MASK) != 0)
 				{
-					System.out.println ("\tCONTROL");
+					System.out.println("\tCONTROL");
 				}
 
-				if ((event.getModifiers () & Event.ALT_MASK) != 0)
+				if ((event.getModifiers() & Event.ALT_MASK) != 0)
 				{
-					System.out.println ("\tALT");
+					System.out.println("\tALT");
 				}
 
-				System.out.println ("\tKey code: " + event.getKeyCode ());
+				System.out.println("\tKey code: " + event.getKeyCode());
 
-				if (event.getKeyChar () >= 32)
+				if (event.getKeyChar() >= 32)
 				{
-					System.out.println ("\tKey char: " + event.getKeyChar ());
+					System.out.println("\tKey char: " + event.getKeyChar());
 				}
 				else
 				{
-					System.out.println ("\tKey char: " + (int) event.getKeyChar ());
+					System.out.println("\tKey char: " + (int) event.getKeyChar());
 				}
 			}
 		});
 
-		JDICExt.instance ().installSystemHooks ();
+		JDICExt.instance().installSystemHooks();
 
-		System.out.println ("I give you ten seconds to try me...");
+		System.out.println("I give you ten seconds to try me...");
 
 		try
 		{
-			Thread.sleep (10000);
+			Thread.sleep(10000);
 		}
 		catch (Exception x)
 		{
 		}
 
-		JDICExt.instance ().removeSystemHooks ();
+		JDICExt.instance().removeSystemHooks();
 	}
 }

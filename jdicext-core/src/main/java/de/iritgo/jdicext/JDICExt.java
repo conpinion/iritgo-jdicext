@@ -36,20 +36,20 @@ public class JDICExt
 	private boolean enabledGlobalKeyListener;
 
 	/** Global key listeners */
-	private List<GlobalKeyListener> listeners = new LinkedList<GlobalKeyListener> ();
+	private List<GlobalKeyListener> listeners = new LinkedList<GlobalKeyListener>();
 
 	/**
 	 * Create the singleton JDICExt instance.
 	 */
-	private JDICExt ()
+	private JDICExt()
 	{
-		if (System.getProperty ("os.name").indexOf ("Linux") != - 1)
+		if (System.getProperty("os.name").indexOf("Linux") != - 1)
 		{
-			System.loadLibrary ("iritgo-jdicext-linux");
+			System.loadLibrary("iritgo-jdicext-linux");
 		}
-		else if (System.getProperty ("os.name").indexOf ("Windows") != - 1)
+		else if (System.getProperty("os.name").indexOf("Windows") != - 1)
 		{
-			System.loadLibrary ("iritgo-jdicext-win32");
+			System.loadLibrary("iritgo-jdicext-win32");
 		}
 
 		enabledGlobalKeyListener = true;
@@ -60,11 +60,11 @@ public class JDICExt
 	 *
 	 * @return The JDICExt instance.
 	 */
-	public static JDICExt instance ()
+	public static JDICExt instance()
 	{
 		if (jdicExt == null)
 		{
-			jdicExt = new JDICExt ();
+			jdicExt = new JDICExt();
 		}
 
 		return jdicExt;
@@ -75,97 +75,97 @@ public class JDICExt
 	 *
 	 * @return True if the operating system is supported.
 	 */
-	public static boolean isSupportedOs ()
+	public static boolean isSupportedOs()
 	{
-		String osName = System.getProperty ("os.name");
+		String osName = System.getProperty("os.name");
 
-		return osName.indexOf ("Linux") != - 1 || osName.indexOf ("Windows") != - 1;
+		return osName.indexOf("Linux") != - 1 || osName.indexOf("Windows") != - 1;
 	}
 
-	public void installSystemHooks ()
+	public void installSystemHooks()
 	{
-		if (isSupportedOs ())
+		if (isSupportedOs())
 		{
-			nativeInstallSystemHooks ();
+			nativeInstallSystemHooks();
 		}
 	}
 
-	public void removeSystemHooks ()
+	public void removeSystemHooks()
 	{
-		if (isSupportedOs ())
+		if (isSupportedOs())
 		{
-			nativeRemoveSystemHooks ();
+			nativeRemoveSystemHooks();
 		}
 	}
 
-	public void addGlobalKeyListener (GlobalKeyListener listener)
+	public void addGlobalKeyListener(GlobalKeyListener listener)
 	{
-		listeners.add (listener);
+		listeners.add(listener);
 	}
 
-	public void removeGlobalKeyListener (GlobalKeyListener listener)
+	public void removeGlobalKeyListener(GlobalKeyListener listener)
 	{
-		listeners.remove (listener);
+		listeners.remove(listener);
 	}
 
-	public void fireGlobalKeyPressedEvent (GlobalKeyEvent event)
+	public void fireGlobalKeyPressedEvent(GlobalKeyEvent event)
 	{
 		if (enabledGlobalKeyListener)
 		{
 			for (GlobalKeyListener listener : listeners)
 			{
-				listener.globalKeyPressed (event);
+				listener.globalKeyPressed(event);
 			}
 		}
 	}
 
-	public void fireGlobalKeyReleasedEvent (GlobalKeyEvent event)
+	public void fireGlobalKeyReleasedEvent(GlobalKeyEvent event)
 	{
 		if (enabledGlobalKeyListener)
 		{
 			for (GlobalKeyListener listener : listeners)
 			{
-				listener.globalKeyReleased (event);
+				listener.globalKeyReleased(event);
 			}
 		}
 	}
 
-	public void fireGlobalKeyTypedEvent (GlobalKeyEvent event)
+	public void fireGlobalKeyTypedEvent(GlobalKeyEvent event)
 	{
 		if (enabledGlobalKeyListener)
 		{
 			for (GlobalKeyListener listener : listeners)
 			{
-				listener.globalKeyTyped (event);
+				listener.globalKeyTyped(event);
 			}
 		}
 	}
 
-	public void setEnableGlobalKeyListener (boolean enable)
+	public void setEnableGlobalKeyListener(boolean enable)
 	{
 		enabledGlobalKeyListener = enable;
 	}
 
-	public boolean isEnabledGlobalKeyListener ()
+	public boolean isEnabledGlobalKeyListener()
 	{
 		return enabledGlobalKeyListener;
 	}
 
-	public void globalKeyPressed (int time, int modifiers, int keyCode, int keyChar)
+	public void globalKeyPressed(int time, int modifiers, int keyCode, int keyChar)
 	{
-		fireGlobalKeyPressedEvent (new GlobalKeyEvent ((long) time, modifiers, keyCode, (char) keyChar));
+		fireGlobalKeyPressedEvent(new GlobalKeyEvent((long) time, modifiers, keyCode, (char) keyChar));
 	}
 
-	public void globalKeyReleased (int time, int modifiers, int keyCode, int keyChar)
+	public void globalKeyReleased(int time, int modifiers, int keyCode, int keyChar)
 	{
-		fireGlobalKeyReleasedEvent (new GlobalKeyEvent ((long) time, modifiers, keyCode, (char) keyChar));
+		fireGlobalKeyReleasedEvent(new GlobalKeyEvent((long) time, modifiers, keyCode, (char) keyChar));
 
-		fireGlobalKeyTypedEvent (new GlobalKeyEvent ((long) time, modifiers, keyCode, (char) keyChar));
+		fireGlobalKeyTypedEvent(new GlobalKeyEvent((long) time, modifiers, keyCode, (char) keyChar));
 	}
 
-	private native void nativeInstallSystemHooks ();
+	private native void nativeInstallSystemHooks();
 
-	private native void nativeRemoveSystemHooks ();
+	private native void nativeRemoveSystemHooks();
 
-	public native void copySelectedTextInActiveWindowToClipboard ();
+	public native void copySelectedTextInActiveWindowToClipboard();
 }

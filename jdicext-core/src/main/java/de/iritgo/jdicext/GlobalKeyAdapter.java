@@ -22,15 +22,15 @@ package de.iritgo.jdicext;
 
 public class GlobalKeyAdapter implements GlobalKeyListener
 {
-	public void globalKeyPressed (GlobalKeyEvent e)
+	public void globalKeyPressed(GlobalKeyEvent e)
 	{
 	}
 
-	public void globalKeyReleased (GlobalKeyEvent e)
+	public void globalKeyReleased(GlobalKeyEvent e)
 	{
 	}
 
-	public void globalKeyTyped (GlobalKeyEvent e)
+	public void globalKeyTyped(GlobalKeyEvent e)
 	{
 	}
 }

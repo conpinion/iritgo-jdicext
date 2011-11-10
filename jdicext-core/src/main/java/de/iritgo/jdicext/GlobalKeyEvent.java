@@ -30,7 +30,7 @@ public class GlobalKeyEvent
 
 	private char keyChar;
 
-	public GlobalKeyEvent (long when, int modifiers, int keyCode, char keyChar)
+	public GlobalKeyEvent(long when, int modifiers, int keyCode, char keyChar)
 	{
 		this.when = when;
 		this.modifiers = modifiers;
@@ -38,22 +38,22 @@ public class GlobalKeyEvent
 		this.keyChar = keyChar;
 	}
 
-	public long getWhen ()
+	public long getWhen()
 	{
 		return when;
 	}
 
-	public int getModifiers ()
+	public int getModifiers()
 	{
 		return modifiers;
 	}
 
-	public int getKeyCode ()
+	public int getKeyCode()
 	{
 		return keyCode;
 	}
 
-	public char getKeyChar ()
+	public char getKeyChar()
 	{
 		return keyChar;
 	}
