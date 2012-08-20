@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/iritgo-jdicext.iml" filepath="$PROJECT_DIR$/iritgo-jdicext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdicext-core/iritgo-jdicext-core.iml" filepath="$PROJECT_DIR$/jdicext-core/iritgo-jdicext-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdicext-linux-jar/iritgo-jdicext-linux-jar.iml" filepath="$PROJECT_DIR$/jdicext-linux-jar/iritgo-jdicext-linux-jar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdicext-test/iritgo-jdicext-test.iml" filepath="$PROJECT_DIR$/jdicext-test/iritgo-jdicext-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdicext-win32/iritgo-jdicext-win32.iml" filepath="$PROJECT_DIR$/jdicext-win32/iritgo-jdicext-win32.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdicext-win32-jar/iritgo-jdicext-win32-jar.iml" filepath="$PROJECT_DIR$/jdicext-win32-jar/iritgo-jdicext-win32-jar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdicext-linux/libiritgo-jdicext-linux.iml" filepath="$PROJECT_DIR$/jdicext-linux/libiritgo-jdicext-linux.iml" />
+    </modules>
+  </component>
+</project>
+
