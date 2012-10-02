@@ -1,0 +1,65 @@
+
+# /
+/target
+
+# /.idea/
+/.idea/workspace.xml
+/.idea/tasks.xml
+
+# /.settings/
+/.settings/org.eclipse.jdt.core.prefs
+/.settings/org.eclipse.m2e.core.prefs
+
+# /jdicext-core/
+/jdicext-core/target
+
+# /jdicext-core/.settings/
+/jdicext-core/.settings/org.eclipse.core.resources.prefs
+/jdicext-core/.settings/org.eclipse.jdt.core.prefs
+/jdicext-core/.settings/org.eclipse.m2e.core.prefs
+
+# /jdicext-linux/
+/jdicext-linux/target
+
+# /jdicext-linux/.settings/
+/jdicext-linux/.settings/org.eclipse.jdt.core.prefs
+/jdicext-linux/.settings/org.eclipse.m2e.core.prefs
+
+# /jdicext-linux-jar/
+/jdicext-linux-jar/target
+
+# /jdicext-linux-jar/.settings/
+/jdicext-linux-jar/.settings/org.eclipse.core.resources.prefs
+/jdicext-linux-jar/.settings/org.eclipse.core.resources.prefs
+/jdicext-linux-jar/.settings/org.eclipse.jdt.core.prefs
+/jdicext-linux-jar/.settings/org.eclipse.m2e.core.prefs
+
+# /jdicext-linux-jar/src/main/resources/
+/jdicext-linux-jar/src/main/resources/libiritgo-jdicext-linux.so
+
+# /jdicext-test/
+/jdicext-test/target
+
+# /jdicext-test/.settings/
+/jdicext-test/.settings/org.eclipse.core.resources.prefs
+/jdicext-test/.settings/org.eclipse.jdt.core.prefs
+/jdicext-test/.settings/org.eclipse.m2e.core.prefs
+
+# /jdicext-win32/
+/jdicext-win32/target
+
+# /jdicext-win32/.settings/
+/jdicext-win32/.settings/org.eclipse.jdt.core.prefs
+/jdicext-win32/.settings/org.eclipse.m2e.core.prefs
+
+# /jdicext-win32-jar/
+/jdicext-win32-jar/target
+
+# /jdicext-win32-jar/.settings/
+/jdicext-win32-jar/.settings/org.eclipse.core.resources.prefs
+/jdicext-win32-jar/.settings/org.eclipse.core.resources.prefs
+/jdicext-win32-jar/.settings/org.eclipse.jdt.core.prefs
+/jdicext-win32-jar/.settings/org.eclipse.m2e.core.prefs
+
+# /jdicext-win32-jar/src/main/resources/
+/jdicext-win32-jar/src/main/resources/iritgo-jdicext-win32.dll
